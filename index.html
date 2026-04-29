@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Venugopal Avula — Data analyst portfolio rendered as a live dashboard." />
+  <title>Venugopal Avula · Analytics Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <div class="topbar__brand">
+      <span class="dot"></span>
+      <span class="brand-name">venu.avula</span>
+      <span class="brand-meta">/ analytics</span>
+    </div>
+    <nav class="topbar__nav">
+      <a href="#overview">Overview</a>
+      <a href="#projects">Projects</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="topbar__right">
+      <span class="status">
+        <span class="status__pulse"></span>
+        <span>Available for work</span>
+      </span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="dashboard" id="overview">
+    <!-- HERO BENTO -->
+    <section class="bento">
+      <div class="cell cell--hero">
+        <div class="cell__head">
+          <span class="kicker"><span class="kicker__dot"></span> profile</span>
+          <span class="cell__menu">⋯</span>
+        </div>
+        <h2 class="hero-name"><span class="hero-name__first">Venugopal</span> <span class="hero-name__last">Avula</span></h2>
+        <h1 class="hero-title">
+          Turning enterprise data into <span class="hl">decisions</span> executives can act on.
+        </h1>
+        <p class="hero-sub">
+          Delivering data-driven solutions through Power BI dashboards, Azure pipelines, and automated reporting to improve decision-making and reduce manual effort.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn--primary">Browse projects <span aria-hidden="true">→</span></a>
+          <a href="assets/Venugopal-Avula-CV.pdf" class="btn btn--ghost" target="_blank" rel="noopener">Download résumé <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+
+      <div class="cell cell--avatar">
+        <div class="avatar-frame">
+          <div class="avatar-grid"></div>
+          <div class="avatar-circle"><span>VA</span></div>
+          <div class="avatar-tags">
+            <span class="chip">PL-300</span>
+            <span class="chip chip--accent">DAX</span>
+            <span class="chip">Fabric</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cell cell--stat">
+        <div class="cell__head"><span class="kicker">years experience</span></div>
+        <div class="stat-big" data-counter="2" data-suffix="+">0</div>
+        <div class="trend up">↗ growing fast</div>
+      </div>
+
+      <div class="cell cell--stat">
+        <div class="cell__head"><span class="kicker">enterprise projects</span></div>
+        <div class="stat-big" data-counter="5">0</div>
+        <div class="trend up">5 / 5 shipped</div>
+      </div>
+
+      <div class="cell cell--stat">
+        <div class="cell__head"><span class="kicker">KPIs delivered</span></div>
+        <div class="stat-big" data-counter="50" data-suffix="+">0</div>
+        <div class="trend up">↗ on CFO dash</div>
+      </div>
+
+      <div class="cell cell--stat">
+        <div class="cell__head"><span class="kicker">hours saved / month</span></div>
+        <div class="stat-big" data-counter="30" data-suffix="+">0</div>
+        <div class="trend up">via VBA automation</div>
+      </div>
+
+      <div class="cell cell--chart cell--span-2">
+        <div class="cell__head">
+          <span class="kicker"><span class="kicker__dot"></span> skill distribution</span>
+          <span class="cell__legend">last 24 months</span>
+        </div>
+        <div class="chart-wrap"><canvas id="chartSkills"></canvas></div>
+      </div>
+
+      <div class="cell cell--span-2">
+        <div class="cell__head">
+          <span class="kicker"><span class="kicker__dot"></span> currently exploring</span>
+          <span class="cell__legend">2026 · focus</span>
+        </div>
+        <ul class="explore">
+          <li>
+            <span class="explore__name">Microsoft Fabric</span>
+            <span class="explore__bar"><span style="width:82%"></span></span>
+            <span class="explore__status">deepening</span>
+          </li>
+          <li>
+            <span class="explore__name">Direct Lake mode</span>
+            <span class="explore__bar"><span style="width:55%"></span></span>
+            <span class="explore__status">learning</span>
+          </li>
+          <li>
+            <span class="explore__name">Advanced DAX patterns</span>
+            <span class="explore__bar"><span style="width:74%"></span></span>
+            <span class="explore__status">refining</span>
+          </li>
+          <li>
+            <span class="explore__name">Real-time analytics</span>
+            <span class="explore__bar"><span style="width:48%"></span></span>
+            <span class="explore__status">exploring</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TOOL TICKER -->
+    <section class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>POWER BI</span><span>·</span><span>DAX</span><span>·</span><span>POWER QUERY</span><span>·</span><span>AZURE DATA FACTORY</span><span>·</span><span>DATABRICKS</span><span>·</span><span>SYNAPSE</span><span>·</span><span>MICROSOFT FABRIC</span><span>·</span><span>LAKEHOUSE</span><span>·</span><span>SQL SERVER</span><span>·</span><span>PYSPARK</span><span>·</span><span>VBA</span><span>·</span>
+        <span>POWER BI</span><span>·</span><span>DAX</span><span>·</span><span>POWER QUERY</span><span>·</span><span>AZURE DATA FACTORY</span><span>·</span><span>DATABRICKS</span><span>·</span><span>SYNAPSE</span><span>·</span><span>MICROSOFT FABRIC</span><span>·</span><span>LAKEHOUSE</span><span>·</span><span>SQL SERVER</span><span>·</span><span>PYSPARK</span><span>·</span><span>VBA</span><span>·</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="block" id="projects">
+      <div class="block__head">
+        <p class="kicker"><span class="kicker__dot"></span> portfolio / engagements</p>
+        <h2>Engagements</h2>
+        <p class="block__sub">Delivered end-to-end data solutions including dashboards, data pipelines, and cloud integrations to enable real-time, decision-ready insights.</p>
+      </div>
+
+      <div class="projects">
+        <article class="proj">
+          <div class="proj__no">01</div>
+          <div class="proj__body">
+            <div class="proj__meta"><span>Neural Foundry · UK</span><span>Power BI · SQL · PHP</span></div>
+            <h3>CFO Financial Control &amp; Liquidity Dashboard</h3>
+            <p>Executive Power BI dashboard for real-time visibility into profitability, cash flow and working capital — embedded inside the client's PHP web app with row-level security.</p>
+            <div class="proj__metrics">
+              <div><strong>50+</strong><span>KPIs</span></div>
+              <div><strong>RLS</strong><span>secured</span></div>
+              <div><strong>~realtime</strong><span>refresh</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj__no">02</div>
+          <div class="proj__body">
+            <div class="proj__meta"><span>Ecoservity · USA</span><span>Fabric · Databricks · PySpark</span></div>
+            <h3>SAP → Microsoft Fabric Lakehouse Integration</h3>
+            <p>Integrated live SAP data via People@Work into a Fabric Lakehouse / Azure Data Lake, with Databricks &amp; PySpark pipelines and Power BI dashboards delivering real-time, decision-ready insights.</p>
+            <div class="proj__metrics">
+              <div><strong>Lakehouse</strong><span>architecture</span></div>
+              <div><strong>PySpark</strong><span>at scale</span></div>
+              <div><strong>Enterprise</strong><span>reporting</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj__no">03</div>
+          <div class="proj__body">
+            <div class="proj__meta"><span>British Petroleum · USA</span><span>Excel VBA · Validation</span></div>
+            <h3>PACE Regulatory Compliance Reporting (EPA / RVO)</h3>
+            <p>Automated EPA/RVO reporting for refinery data with VBA — structured templates, validation checks and audit-ready outputs.</p>
+            <div class="proj__metrics">
+              <div><strong>30+ hrs</strong><span>saved / month</span></div>
+              <div><strong>0</strong><span>discrepancies</span></div>
+              <div><strong>Audit-ready</strong><span>outputs</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj__no">04</div>
+          <div class="proj__body">
+            <div class="proj__meta"><span>Ecoservity · USA</span><span>VBA · Power Query</span></div>
+            <h3>SAP ECC → S/4HANA Data Migration</h3>
+            <p>Excel-driven migration toolkit for cleansing, transforming and validating SAP master &amp; transactional data ahead of S/4HANA cutover.</p>
+            <div class="proj__metrics">
+              <div><strong>Multi-source</strong><span>standardized</span></div>
+              <div><strong>↓ rework</strong><span>via validation</span></div>
+              <div><strong>Smooth</strong><span>cutover</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj__no">05</div>
+          <div class="proj__body">
+            <div class="proj__meta"><span>British Petroleum · UK</span><span>Excel · VBA · XLOOKUP</span></div>
+            <h3>Sales &amp; Cost Forecasting Automation</h3>
+            <p>Dynamic, multi-period sales &amp; cost forecasting model with VBA-driven calculations and validation controls for accurate planning.</p>
+            <div class="proj__metrics">
+              <div><strong>Multi-period</strong><span>projections</span></div>
+              <div><strong>Automated</strong><span>updates</span></div>
+              <div><strong>Validated</strong><span>inputs</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="block block--alt" id="stack">
+      <div class="block__head">
+        <p class="kicker"><span class="kicker__dot"></span> stack / tooling</p>
+        <h2>The tools I work with</h2>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-cell"><h4>Power BI</h4><p>DAX · Power Query · Data Modeling · RLS / OLS · Service · Report Builder · Embedded</p></div>
+        <div class="stack-cell"><h4>Azure &amp; Fabric</h4><p>Data Factory · Databricks · Synapse · Microsoft Fabric · Lakehouse · Blob Storage</p></div>
+        <div class="stack-cell"><h4>Databases</h4><p>SQL Server · MySQL · Data Warehousing</p></div>
+        <div class="stack-cell"><h4>Excel &amp; VBA</h4><p>Advanced Excel · VBA Automation · Power Query</p></div>
+        <div class="stack-cell"><h4>Languages</h4><p>PySpark · DAX · M · SQL · HTML · CSS</p></div>
+        <div class="stack-cell"><h4>Certification</h4><p>Microsoft PL-300 · Power BI Data Analyst Associate</p></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="block" id="contact">
+      <div class="block__head">
+        <p class="kicker"><span class="kicker__dot"></span> contact / channels</p>
+        <h2>Let's build something useful.</h2>
+        <p class="block__sub">Open to roles in Data Analytics, Power BI development, and Azure Data Engineering.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-cell" href="mailto:venu82332@gmail.com">
+          <span class="contact-cell__label">// email</span>
+          <span class="contact-cell__value">venu82332@gmail.com</span>
+          <span class="contact-cell__arrow">→</span>
+        </a>
+        <a class="contact-cell" href="tel:+917287976788">
+          <span class="contact-cell__label">// phone</span>
+          <span class="contact-cell__value">+91 72879 76788</span>
+          <span class="contact-cell__arrow">→</span>
+        </a>
+        <a class="contact-cell" href="https://linkedin.com/in/avula-venugopal" target="_blank" rel="noopener">
+          <span class="contact-cell__label">// linkedin</span>
+          <span class="contact-cell__value">avula-venugopal</span>
+          <span class="contact-cell__arrow">↗</span>
+        </a>
+        <a class="contact-cell" href="https://github.com/" target="_blank" rel="noopener">
+          <span class="contact-cell__label">// github</span>
+          <span class="contact-cell__value">venu-avula</span>
+          <span class="contact-cell__arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span>&copy; <span id="year"></span> Venugopal Avula</span>
+      <span class="foot__build">build · v2.0 · dashboard</span>
+      <a href="#overview" class="foot__top">↑ top</a>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
